@@ -1,5 +1,10 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Login from "./pages/login_page.js";
+import Homepage from "./pages/homepage_page.js";
+import SignupPage from "./pages/signup_page.js";
+import PostDetailsPage from "./pages/post_details_page.js";
+import AddNewPostPage from "./pages/add_post_page.js";
 function App() {
   return (
     <Router>
@@ -15,24 +20,16 @@ function App() {
           </ul>
         </nav>
         <Routes>
-          <Route path="/" exact element={<Home />} />
+          <Route path="/" exact element={<Homepage />} />
           <Route path="/login" exact element={<Login />} />
+          <Route path="/signup" exact element={<SignupPage />} />
+          <Route path="/article_details" exact element={<PostDetailsPage />} />
+          <Route path="/add_new_post" exact element={<AddNewPostPage />} />
+          <Route path="/my_articles" exact element={<AddNewPostPage />} />
         </Routes>
       </div>
     </Router>
   );
-}
-
-function Login() {
-  return (
-    <div className="flex flex-col">
-      <h2 className="text-3xl">Login</h2>
-    </div>
-  );
-}
-
-function Home() {
-  return <h2 className="text-3xl">Home</h2>;
 }
 
 export default App;
