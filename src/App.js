@@ -9,16 +9,26 @@ function App() {
   return (
     <Router>
       <div className="flex flex-col w-full bg-gray-100 min-h-screen ">
-        <nav>
-          <ul className="flex space-x-2">
-            <li>
+        <div className="flex w-full justify-between p-2 items-end">
+          <div className="flex">
+            {" "}
+            <div className="flex text-teal-700 leading-5 font-black  text-2xl">
+              Ruth <br /> Articles
+            </div>
+            <div className="flex  px-2 mx-1 hover:text-teal-700 transition-all">
               <Link to="/">Home</Link>
-            </li>
-            <li>
+            </div>
+          </div>
+          <div className="flex">
+            {" "}
+            <div className="flex  px-2 mx-1 hover:text-teal-700 transition-all">
               <Link to="/login">Login</Link>
-            </li>
-          </ul>
-        </nav>
+            </div>
+            <div className="flex  px-2 mx-1 hover:text-teal-700 transition-all">
+              <Link to="/signup">Signup</Link>
+            </div>
+          </div>
+        </div>
         <Routes>
           <Route path="/" exact element={<Homepage />} />
           <Route path="/login" exact element={<Login />} />

@@ -1,7 +1,7 @@
 function Login() {
   return (
-    <div className="flex flex-col">
-      <h2 className="text-3xl">Login</h2>
+    <div className="flex flex-col w-full">
+      <p>Login page</p>
     </div>
   );
 }
