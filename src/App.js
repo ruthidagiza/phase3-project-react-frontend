@@ -14,17 +14,17 @@ function App() {
             {" "}
             <Link to="/">
               <div className="flex text-teal-700 cursor-pointer leading-5 font-black  text-2xl">
-                Ruth <br /> Articles
+                Ruth Articles
               </div>
             </Link>
-            <div className="flex  px-2 mx-1 hover:text-teal-700 transition-all">
+            {/* <div className="flex  px-2 mx-1 hover:text-teal-700 transition-all">
               <Link to="/">Home</Link>
-            </div>
+            </div> */}
           </div>
           <div className="flex">
             {" "}
-            <div className="flex  px-2 py-1 rounded-lg mx-1 hover:text-teal-700 border-[1px] border-teal-700  transition-all">
-              <Link to="/add_new_post">Add New Post</Link>
+            <div className="flex  py-1 rounded-lg mx-1 hover:text-teal-700 border-[1px] border-teal-700 px-5 transition-all">
+              <Link to="/add_new_post">Add New Article</Link>
             </div>
           </div>
         </div>
