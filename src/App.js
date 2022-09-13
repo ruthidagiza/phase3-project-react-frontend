@@ -23,11 +23,8 @@ function App() {
           </div>
           <div className="flex">
             {" "}
-            <div className="flex  px-2 mx-1 hover:text-teal-700 transition-all">
-              <Link to="/login">Login</Link>
-            </div>
-            <div className="flex  px-2 mx-1 hover:text-teal-700 transition-all">
-              <Link to="/signup">Signup</Link>
+            <div className="flex  px-2 py-1 rounded-lg mx-1 hover:text-teal-700 border-[1px] border-teal-700  transition-all">
+              <Link to="/add_new_post">Add New Post</Link>
             </div>
           </div>
         </div>
@@ -37,7 +34,7 @@ function App() {
           <Route path="/signup" exact element={<SignupPage />} />
           <Route path="/article_details" exact element={<PostDetailsPage />} />
           <Route path="/add_new_post" exact element={<AddNewPostPage />} />
-          <Route path="/my_articles" exact element={<AddNewPostPage />} />
+          {/* <Route path="/my_articles" exact element={<AddNewPostPage />} /> */}
         </Routes>
       </div>
     </Router>

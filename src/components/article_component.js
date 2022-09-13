@@ -1,6 +1,7 @@
 import moment from "moment";
-
+import React, { useState } from "react";
 function ArticleComponent() {
+  const [deleting, setDeleting] = useState(false);
   return (
     <div className="flex flex-col p-1 m-1 rounded-lg border-[0.5px] border-gray-400 w-6/6">
       <div className="flex justify-between items-center w-6/6">
@@ -39,20 +40,14 @@ function ArticleComponent() {
             10 likes
           </div>
         </div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="w-6 h-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-          />
-        </svg>
+        <div className="flex items-center space-x-3">
+          <div className="text-xs p-0.5 px-2 rounded-lg bg-teal-600 text-white cursor-pointer">
+            Update
+          </div>
+          <div className="text-xs p-0.5 px-2 rounded-lg bg-red-500 text-white cursor-pointer">
+            Delete
+          </div>
+        </div>
       </div>
     </div>
   );
