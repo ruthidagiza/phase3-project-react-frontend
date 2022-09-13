@@ -12,9 +12,11 @@ function App() {
         <div className="flex w-full justify-between p-2 items-end">
           <div className="flex">
             {" "}
-            <div className="flex text-teal-700 leading-5 font-black  text-2xl">
-              Ruth <br /> Articles
-            </div>
+            <Link to="/">
+              <div className="flex text-teal-700 cursor-pointer leading-5 font-black  text-2xl">
+                Ruth <br /> Articles
+              </div>
+            </Link>
             <div className="flex  px-2 mx-1 hover:text-teal-700 transition-all">
               <Link to="/">Home</Link>
             </div>
