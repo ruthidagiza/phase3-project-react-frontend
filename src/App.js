@@ -5,6 +5,7 @@ import Homepage from "./pages/homepage_page.js";
 import SignupPage from "./pages/signup_page.js";
 import PostDetailsPage from "./pages/post_details_page.js";
 import AddNewPostPage from "./pages/add_post_page.js";
+import UpdateArticlePage from "./pages/update_article_page.js";
 function App() {
   return (
     <Router>
@@ -13,7 +14,7 @@ function App() {
           <div className="flex">
             {" "}
             <Link to="/">
-              <div className="flex text-teal-700 cursor-pointer leading-5 font-black  text-2xl">
+              <div className="flex text-teal-700 cursor-pointer leading-5 font-black  text-3xl">
                 Ruth Articles
               </div>
             </Link>
@@ -34,6 +35,7 @@ function App() {
           <Route path="/signup" exact element={<SignupPage />} />
           <Route path="/article_details" exact element={<PostDetailsPage />} />
           <Route path="/add_new_post" exact element={<AddNewPostPage />} />
+          <Route path="/update_article" exact element={<UpdateArticlePage />} />
           {/* <Route path="/my_articles" exact element={<AddNewPostPage />} /> */}
         </Routes>
       </div>

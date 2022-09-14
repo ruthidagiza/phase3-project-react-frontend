@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function AddNewPostPage() {
+function UpdateArticlePage() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [writersName, setWritersName] = useState("");
@@ -8,7 +8,7 @@ function AddNewPostPage() {
 
   return (
     <div className="flex flex-col">
-      <h2 className="text-xl">Add new Article page</h2>
+      <h2 className="text-xl">Update Article page</h2>
       <div className="flex flex-col md:w-[700px] w-full p-2 text-gray-800 ">
         <input
           value={title}
@@ -31,7 +31,7 @@ function AddNewPostPage() {
         />
         <div className="flex justify-end w-full px-2">
           <div className="px-5 cursor-pointer py-1 rounded-lg bg-teal-700 text-white mt-5 text-sm ">
-            Save Article
+            Update Article
           </div>
         </div>
       </div>
@@ -39,4 +39,4 @@ function AddNewPostPage() {
   );
 }
 
-export default AddNewPostPage;
+export default UpdateArticlePage;
