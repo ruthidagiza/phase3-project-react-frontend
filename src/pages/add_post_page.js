@@ -1,10 +1,29 @@
+import axios from "axios";
 import React, { useState } from "react";
+import { productionUrl } from "../models/constants";
 
 function AddNewPostPage() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [writersName, setWritersName] = useState("");
   const [loading, setLoading] = useState(false);
+  const saveArticleToServer = async () => {
+    try {
+      let newarticle = {
+        title: title,
+        content: content,
+        writersName: writersName,
+        createdAt: Date.now(),
+        likes: 10,
+      };
+      let res = await axios.post(`${productionUrl}/articles`, newarticle);
+      if (res.status == 201) {
+        //navigate back to homepage
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   return (
     <div className="flex flex-col">
